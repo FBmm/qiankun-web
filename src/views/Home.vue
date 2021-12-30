@@ -32,7 +32,7 @@ export default class Home extends Vue {
     el.onclick = function () {
       i++
       if (i > 4) i = 1
-      bgEl.style.backgroundImage = `url(./assets/bg${i}.jpeg)`
+      bgEl.style.backgroundImage = `url(@/assets/bg${i}.jpeg)`
     }
     document.querySelector('audio')?.play()
   }
@@ -44,7 +44,7 @@ export default class Home extends Vue {
 .bg {
   width: 100%;
   height: 100%;
-  background-image: url('@/assets/bg1.jpeg');
+  background-image: url('../assets/bg1.jpeg');
   background-size: cover;
 }
 .snow-list {
@@ -89,7 +89,7 @@ export default class Home extends Vue {
 }
 .snow-bg {
   height: 100%;
-  background-image: url('@/assets/snow.png');
+  background-image: url('../assets/snow.png');
 }
 .snow-bg-2 {
   background-position: -10px 0;
