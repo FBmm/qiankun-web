@@ -25,18 +25,17 @@ import { Options, Vue } from 'vue-class-component'
 })
 export default class Home extends Vue {
   activeIndex: undefined
-  onMounted() {
+  mounted() {
     let i = 1
     const el: any = document.querySelector('.snow-list')
     const bgEl: any = document.querySelector('.bg')
     el.onclick = function () {
       i++
       if (i > 4) i = 1
-      bgEl.style.backgroundImage = `url(@/assets/bg${i}.jpeg)`
+      bgEl.style.backgroundImage = `url(${require(`@/assets/bg${i}.jpeg`)})`
     }
     document.querySelector('audio')?.play()
   }
-  handleSelect() {}
 }
 </script>
 
